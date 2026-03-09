@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Janiya Buty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-primary-light antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 text-dark flex items-center min-h-[5rem]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-2xl font-bold tracking-widest text-[#d4af37]">JANIYA <span class="text-[#222]">BUTY</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">Home</a>
+                    <a href="products.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">Shop</a>
+                    <a href="about.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">About</a>
+                    <a href="contact.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">Contact</a>
+                    <a href="products.html" class="px-6 py-2 btn-primary rounded-none uppercase text-xs tracking-widest font-semibold flex items-center space-x-2">
+                        <span>Cart (0)</span>
+                    </a>
+                </div>
+                <!-- Mobile button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg left-0 top-20">
+            <div class="px-4 pt-4 pb-6 space-y-4 flex flex-col items-center">
+                <a href="index.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">Home</a>
+                <a href="products.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">Shop</a>
+                <a href="about.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">About</a>
+                <a href="contact.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-40 pb-20 px-4 text-center max-w-4xl mx-auto fade-in">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-[#222] mb-6">Our Philosophy</h1>
+        <p class="text-xl text-gray-500 font-light leading-relaxed">We believe that true beauty comes from nature, science, and the ritual of self-care. Introducing Janiya Buty.</p>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <img src="assets/images/model.png" alt="Glowing Skin" class="rounded-md shadow-xl w-full">
+            </div>
+            <div class="fade-in" style="transition-delay: 0.2s;">
+                <h2 class="text-3xl font-serif font-bold mb-6">The Journey to Radiance</h2>
+                <p class="text-gray-600 mb-6 font-light leading-relaxed">It started with a simple belief: everyone deserves to feel confident in their own skin. Janiya Buty was born out of a desire to create a premium skincare line that doesn't just promise results, but delivers an exquisite sensory experience along the way.</p>
+                <p class="text-gray-600 font-light leading-relaxed">We source only the finest botanical ingredients and combine them in perfectly balanced formulas that respect your skin's natural barrier while elevating its luminosity.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mt-24">
+            <div class="order-2 md:order-1 fade-in">
+                <h2 class="text-3xl font-serif font-bold mb-6">Masterfully Crafted</h2>
+                <p class="text-gray-600 mb-6 font-light leading-relaxed">Every jar of Janiya Buty Cream represents countless hours of research and refinement. Notice the luxurious, rich texture that magically melts into the skin without any greasy residue.</p>
+                <a href="products.html" class="inline-block border-b border-[#222] pb-1 font-semibold text-sm uppercase tracking-widest hover:text-[#d4af37] hover:border-[#d4af37] transition text-[#222]">Discover the Cream</a>
+            </div>
+            <div class="order-1 md:order-2 fade-in" style="transition-delay: 0.2s;">
+                <img src="assets/images/texture.png" alt="Cream Texture" class="rounded-md shadow-xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100 px-4 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <a href="index.html" class="font-serif text-2xl font-bold tracking-widest text-[#d4af37]">JANIYA <span class="text-[#222]">BUTY</span></a>
+            </div>
+            <p class="text-xs text-gray-500 mt-6 md:mt-0 uppercase tracking-widest">&copy; 2026 Janiya Buty. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
