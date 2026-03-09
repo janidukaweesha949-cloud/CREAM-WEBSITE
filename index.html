@@ -1,132 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janiya Buty | Premium Skincare</title>
-    <meta name="description" content="Discover the secret to flawless, glowing skin with Janiya Buty premium cream.">
+    <title>Janiya Boxing Coaching | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-primary-light antialiased">
+<body class="antialiased">
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 text-dark flex items-center min-h-[5rem]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="flex justify-between items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-serif text-2xl font-bold tracking-widest text-[#d4af37]">JANIYA <span class="text-[#222]">BUTY</span></a>
-                </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">Home</a>
-                    <a href="products.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">Shop</a>
-                    <a href="about.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">About</a>
-                    <a href="contact.html" class="text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37] transition">Contact</a>
-                    <a href="products.html" class="px-6 py-2 btn-primary rounded-none uppercase text-xs tracking-widest font-semibold flex items-center space-x-2">
-                        <span>Cart (0)</span>
-                    </a>
-                </div>
-                <!-- Mobile button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
-                </div>
+    <nav class="py-4 px-6 fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fa-solid fa-hand-fist text-[#ff2e63] text-2xl pulse-icon"></i>
+                <span class="footer-brand text-gradient">BOX MASTER</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link active font-medium text-sm">Home</a>
+                <a href="classes.html" class="nav-link font-medium text-sm text-[#a0a0a0]">Classes</a>
+                <a href="updates.html" class="nav-link font-medium text-sm text-[#a0a0a0]">Fight Updates</a>
+                <a href="contact.html" class="nav-link font-medium text-sm text-[#a0a0a0]">Contact</a>
             </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg left-0 top-20">
-            <div class="px-4 pt-4 pb-6 space-y-4 flex flex-col items-center">
-                <a href="index.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">Home</a>
-                <a href="products.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">Shop</a>
-                <a href="about.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">About</a>
-                <a href="contact.html" class="block text-sm uppercase tracking-wider font-semibold hover:text-[#d4af37]">Contact</a>
-            </div>
+
+            <a href="contact.html" class="hidden md:inline-block btn-primary text-sm px-6 py-2">Join Now</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-[#0a0a0a] flex flex-col items-center justify-center space-y-8">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-white text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html" class="text-2xl font-bold text-[#ff2e63]">Home</a>
+        <a href="classes.html" class="text-2xl font-bold">Classes</a>
+        <a href="updates.html" class="text-2xl font-bold">Fight Updates</a>
+        <a href="contact.html" class="text-2xl font-bold">Contact</a>
+    </div>
+
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-rose-gradient pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 text-center md:text-left pt-12 md:pt-0 pr-0 md:pr-10 fade-in">
-                <span class="text-[#d4af37] uppercase tracking-[0.3em] text-xs font-bold mb-4 block">The Secret to Radiance</span>
-                <h1 class="text-5xl md:text-7xl font-serif font-bold text-[#222] mb-6 leading-tight">Revive Your <br/><span class="italic text-[#d4af37]">Natural Glow</span></h1>
-                <p class="text-lg text-gray-600 mb-10 max-w-md mx-auto md:mx-0 font-light leading-relaxed">Experience the ultimate luxury in skincare. Janiya Buty Cream is crafted perfectly to hydrate, restore, and illuminate your skin effortlessly.</p>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="products.html" class="px-10 py-4 btn-primary text-sm uppercase tracking-widest font-semibold rounded-sm">Shop Now</a>
-                    <a href="about.html" class="px-10 py-4 btn-outline text-sm uppercase tracking-widest font-semibold rounded-sm hover:-translate-y-1 hover:shadow-lg inline-block text-center border-[#222]">Discover</a>
+    <header class="hero-wrapper" style="background-image: url('assets/images/boxing_hero_1773032091566.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="hero-overlay"></div>
+        <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 hero-content flex flex-col justify-center h-full w-full">
+            <div class="md:w-2/3 fade-in-up">
+                <span class="inline-block py-1 px-3 border border-[#ff2e63] text-[#ff2e63] text-sm font-bold uppercase tracking-widest rounded-full mb-6 glass-card bg-transparent !p-2 !px-4">Train Like A Champion</span>
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+                    Lankawe Hodama <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff2e63] to-[#ff8a00]">Boxing Coaching</span> Eka
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl font-light">
+                    Thamanwa araksha karaganna, fit ekata inna saha professional level ekata yanna api ekka ekathu wenna.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="classes.html" class="btn-primary text-center">View Packages</a>
+                    <a href="updates.html" class="btn-secondary text-center">Latest Fights <i class="fa-solid fa-arrow-right ml-2"></i></a>
                 </div>
-            </div>
-            <div class="md:w-1/2 mt-16 md:mt-0 relative fade-in w-full flex justify-center" style="transition-delay: 0.2s;">
-                <div class="absolute inset-0 bg-[#d4af37] rounded-full blur-3xl opacity-20 transform scale-150 -translate-y-10"></div>
-                <img src="assets/images/hero.png" alt="Janiya Buty Premium Cream" class="relative z-10 w-full max-w-lg mx-auto transform hover:scale-105 transition duration-700 ease-out shadow-2xl rounded-md">
             </div>
         </div>
     </header>
 
-    <!-- Excellence Section -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center md:max-w-3xl mx-auto mb-16 fade-in">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6">Pure Luxury for Your Skin</h2>
-                <p class="text-gray-500 font-light leading-relaxed">Formulated with rare botanical extracts and advanced hydration complexes, our cream melts luxuriously into your skin leaving it feeling supple and renewed.</p>
+    <!-- Features Section -->
+    <section class="py-24 bg-[#080808] relative">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-[#ff2e63] rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-5xl text-white font-bold mb-4">Ay Apiwa Thoraganne?</h2>
+                <div class="w-16 h-1 bg-[#ff2e63] mx-auto rounded"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Api obata supirima purudu kirimak laba denawa oyalage anagathaya wenuwen.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
-                <div class="text-center p-8 glass-card fade-in">
-                    <div class="w-16 h-16 mx-auto bg-[#f9f6f0] rounded-full flex items-center justify-center mb-6 text-[#d4af37]">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-card fade-in-up delay-100 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#ff2e63] to-[#d9042b] flex items-center justify-center mb-6 shadow-lg shadow-red-500/30">
+                        <i class="fa-solid fa-user-ninja text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Luminous Glow</h3>
-                    <p class="text-gray-500 font-light text-sm leading-relaxed">Instantly revives dull skin providing a subtle, glass-like radiance that lasts all day.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Professional Coaching</h3>
+                    <p class="text-gray-400 text-sm">Supiri athdakeem sahitha coach warun magin obata purudu kirimak laba dei.</p>
                 </div>
-                <div class="text-center p-8 glass-card fade-in" style="transition-delay: 0.2s;">
-                    <div class="w-16 h-16 mx-auto bg-[#f9f6f0] rounded-full flex items-center justify-center mb-6 text-[#d4af37]">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                <!-- Feature 2 -->
+                <div class="glass-card fade-in-up delay-200 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#ff2e63] to-[#d9042b] flex items-center justify-center mb-6 shadow-lg shadow-red-500/30">
+                        <i class="fa-solid fa-dumbbell text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Deep Hydration</h3>
-                    <p class="text-gray-500 font-light text-sm leading-relaxed">Locks in moisture for 48 hours, keeping your skin nourished and impeccably smooth.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Modern Equipment</h3>
+                    <p class="text-gray-400 text-sm">Aluthma saha hoda thathwaye pugging pad, bags saha anikuth upakarana.</p>
                 </div>
-                <div class="text-center p-8 glass-card fade-in" style="transition-delay: 0.4s;">
-                    <div class="w-16 h-16 mx-auto bg-[#f9f6f0] rounded-full flex items-center justify-center mb-6 text-[#d4af37]">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                <!-- Feature 3 -->
+                <div class="glass-card fade-in-up delay-300 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-full bg-gradient-to-br from-[#ff2e63] to-[#d9042b] flex items-center justify-center mb-6 shadow-lg shadow-red-500/30">
+                        <i class="fa-solid fa-trophy text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Anti-Aging</h3>
-                    <p class="text-gray-500 font-light text-sm leading-relaxed">Infused with natural collagen boosters to smooth fine lines and restore elasticity naturally.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Fight Preparation</h3>
+                    <p class="text-gray-400 text-sm">Taragawala ta ready wenna oone techniques saha physical stamina eka hadana eka.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Visual Divider -->
-    <section class="w-full flex flex-col md:flex-row">
-        <div class="w-full md:w-1/2 h-80 md:h-[600px] bg-cover bg-center" style="background-image: url('assets/images/model.png');"></div>
-        <div class="w-full md:w-1/2 h-80 md:h-[600px] bg-cover bg-center" style="background-image: url('assets/images/texture.png');"></div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="py-24 bg-[#222] text-white text-center px-4">
-        <div class="max-w-4xl mx-auto fade-in">
-            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-8">Ready to transform your skin?</h2>
-            <p class="text-gray-300 font-light text-lg mb-10">Join thousands of Sri Lankan women who have discovered the miracle of Janiya Buty.</p>
-            <a href="products.html" class="px-12 py-5 bg-[#d4af37] text-white text-sm uppercase tracking-widest font-semibold hover:bg-white hover:text-[#222] transition duration-300 rounded-sm inline-block">Shop The Collection</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 border-t border-gray-100 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0">
-                <a href="index.html" class="font-serif text-2xl font-bold tracking-widest text-[#d4af37]">JANIYA <span class="text-[#222]">BUTY</span></a>
+    <footer class="pt-16 pb-8 border-t border-[rgba(255,255,255,0.05)] bg-[#050505] relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[rgba(255,46,99,0.05)] to-transparent pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+                <a href="index.html" class="flex items-center gap-2">
+                    <i class="fa-solid fa-hand-fist text-[#ff2e63] text-2xl"></i>
+                    <span class="footer-brand text-gradient">BOX MASTER</span>
+                </a>
+                <div class="flex gap-6">
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#ff2e63] hover:border-[#ff2e63] transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#ff2e63] hover:border-[#ff2e63] transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#ff2e63] hover:border-[#ff2e63] transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-[#ff2e63] hover:border-[#ff2e63] transition-all"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
             </div>
-            <div class="flex space-x-6">
-                <!-- Social Icons -->
-                <a href="#" class="text-gray-400 hover:text-[#d4af37] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557A9.83 9.83 0 0121.172 5.33a4.932 4.932 0 002.162-2.724 9.865 9.865 0 01-3.127 1.196 4.92 4.92 0 00-8.39 4.49A13.96 13.96 0 011.67 3.149a4.922 4.922 0 001.524 6.574 4.903 4.903 0 01-2.229-.616c-.053 2.281 1.582 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.925 4.925 0 004.6 3.42 9.869 9.869 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.924 13.924 0 007.548 2.213c9.057 0 14.01-7.502 14.01-14.01 0-.213-.005-.426-.015-.637A10.025 10.025 0 0024 4.557z"/></svg></a>
-                <a href="#" class="text-gray-400 hover:text-[#d4af37] transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <div class="text-center border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Box Master Gym. All Rights Reserved.</p>
+                <p class="mt-4 md:mt-0 font-medium tracking-wide">built by <span class="text-[#ff2e63] font-bold">janiya</span></p>
             </div>
-            <p class="text-xs text-gray-500 mt-6 md:mt-0 uppercase tracking-widest">&copy; 2026 Janiya Buty. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
